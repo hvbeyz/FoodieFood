@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Food - Find Food!</title>
+    <link rel="stylesheet" href="owl.carousel.min.css">
+	<link rel="stylesheet" href="owl.theme.default.min.css">
+    <script src="mekan.js"></script>
+    <style type="text/css">
+        html{
+            text-decoration: none;
+            
+            color: white;
+            cursor: pointer;
+            font-family: sans-serif;
+            
+        }
+        nav {
+            margin: 20px auto 0;
+         
+            position: relative;
+            width: 750px;
+            height: 50px;
+            background-color: #5C5C5C;
+            
+            font-size: 0;
+        }
+        nav a {
+            line-height: 50px;
+            height: 100%;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+        nav .animation {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease 0s;
+        }
+        a:nth-child(1) {
+            width: 150px;
+        }
+        a:nth-child(2) {
+            width: 150px;
+        }
+        a:nth-child(3) {
+            width: 150px;
+        }
+        a:nth-child(4) {
+            width: 150px;
+        }
+        a:nth-child(5) {
+            width: 150px;
+        }
+        nav .start-home, a:nth-child(1):hover~.animation {
+            width: 150px;
+            left: 0;
+            background-color: #EFC551;
+        }
+        nav .start-about, a:nth-child(2):hover~.animation {
+            width: 150px;
+            left: 150px;
+            background-color: #EFC551;
+        }
+        nav .start-blog, a:nth-child(3):hover~.animation {
+            width: 150px;
+            left: 300px;
+            background-color:#EFC551;
+        }
+        nav .start-portefolio, a:nth-child(4):hover~.animation {
+            width: 150px;
+            left: 450px;
+            background-color: #EFC551;
+        }
+        nav .start-contact, a:nth-child(5):hover~.animation {
+            width: 150px;
+            left: 600px;
+            background-color: #EFC551;
+        }
+         
+        body {
+            font-size: 12px;
+            font-family: sans-serif;
+            background: #dcdde1;
+        }
+        h1 {
+            text-align: center;
+            margin: 40px 0 40px;
+            text-align: center;
+            font-size: 30px;
+            color: #ecf0f1;
+            text-shadow: 2px 2px 4px #000000;
+            font-family: 'Cherry Swash', cursive;
+        }
+         
+        p {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #ecf0f1;
+            font-family: 'Cherry Swash',cursive;
+            font-size: 16px;
+        }
+         
+        span {
+            color: #ffffff;
+        }
+        
+            :root {
+    --color-one: #52117d;
+    --color-two: #a944ec;
+    --color-three: #ffc800;
+    --color-accent: #EFC551;
+    --color-text: #fffed7;
+    --color-bg: #181729;
+            /* Typography */
+    --font-family: "Inter", sans-serif;
+    --font-family-headings: "Inter", sans-serif;
+    }
+
+
+    body {
+    
+    padding: 0;
+    height: 100%;
+    align-items: center;
+    background-color: #5C5C5C;
+    display: grid;
+    place-content: center;
+    }
+
+
+   
+    .beyazlogo{
+            border-radius: 50%; 
+            padding: 20px;
+        
+        }
+  
+    .container {
+    display: block;
+    position: relative;
+    background-color: #5C5C5C;
+    
+    }
+.sagiçerik {
+    width: 80%;
+    float: right;
+    padding-top: 20px;
+   
+    
+
+}
+.sagiçerik img{
+  box-sizing: border-box;
+  border-left-width: 7px  solid #747272;
+  margin-top: 25px;
+  box-shadow: 5px 5px 29px 0px #000000;
+  
+ 
+}
+.sagiçerik h4{
+    background-color: #646464;
+    text-align: left;
+    padding-left: 6px;
+    display: block;
+    border-left: 5px solid #747272;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 0px;
+    line-height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    border-left: 7px solid #EFC551;
+    font-family: "Inter", sans-serif;
+}
+.owlname a{
+  background-color: #646464;
+    text-align: left;
+    width: 1090px;
+    padding-left: 10px;
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 0px;
+    line-height: 45px;
+    overflow: hidden;
+    box-shadow: 5px 5px 29px 0px #444444;
+    
+    border-bottom: 3px solid #EFC551;
+}
+.sagiçerik a{
+  color: #ffffff;
+}
+
+
+a {
+    text-decoration: solid;
+}
+   
+.owl-carousel .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* şehir kısmı */
+.select select,
+		.select option {
+			border-color: transparent transparent transparent;
+			outline: none;
+			font-size: 18px;
+			padding: 5px 55px 5px 5px;
+			background-color: #646464;
+			color: rgb(212, 212, 212);
+			width: 750px;
+            height: 50px;
+			margin: 10px;
+			border-radius: 0;
+      font-family: "Inter", sans-serif;
+           
+            
+		}
+        
+		.select {
+			position: relative;
+			display: inline-block;
+            text-align: center;
+            padding-left: 533px;
+            font-family: "Inter", sans-serif;
+            
+		}
+		.select .arrow {
+			position: absolute;
+			height: 100%;
+			width: 50px;
+			top: 0;
+			right: 0;
+			background-color: #5C5C5C;
+			pointer-events: none;
+		}
+		.select select:focus + .arrow,
+		.select select:hover + .arrow{
+			background-color: #EFC551;
+		}
+		.select .arrow::before,
+		.select .arrow::after {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			left: 5px;
+		}
+		.select .arrow::before {
+			
+			top: 20%;
+		}
+		.select .arrow::after {
+			
+			bottom: 20%;
+		}
+      
+        .footer { background:#333333;width:100%; height:200px;float:left;color:white; font-family:arial; margin-top: 60px;}
+		.footer #kutu b {font-size:14px;}
+		* {margin:0px;padding:0px;}
+		.footer_container{width:768px; height:175px; margin:30px auto;}
+		ul {list-style-type:none;margin:17px 0;padding:0px;}
+		#kutu {width:auto; height:125px; float:left;}
+		ul li {float:left;font-family:tahoma; font-size:12px; margin-bottom:8px; clear:left; color:#949798; }
+		#kutu:last-child li {float:left;clear:none;margin-right:10px;}
+
+    .beyazlogo{
+            border-radius: 50%; 
+            padding: 5px; 
+            margin-left: 0px;
+		      	margin-bottom: 50px;
+            margin-top: 15px
+
+		}
+        </style>
+        <link rel="icon" href="../resimler/ico.ico" type="image/x-icon">
+
+</head>
+<body style="background-color:#5C5C5C;">
+    <div style="background-color:#5C5C5C" width="50" lang="100" >
+        
+    <header >
+        <table>
+            <thead>
+                <tr>
+                    <td style="text-align: left; padding-left: 80px; ;"><img src="../resimler/beyazlogo.png" alt="logo" width="180" class="beyazlogo" ></td>
+                    <td> <img src="../resimler/uzunkahve.png" alt="logo" width="1308"  ></td>
+                    <td style="text-align: right; padding-right: 80px;"><img src="../resimler/beyazlogo.png" alt="logo" width="180"  class="beyazlogo" ></td>
+                </tr>
+                </thead></table>
+    
+    </header>
+</div>
+<div id="kategori"  style="background-color: #5C5C5C; " >
+<nav  style="background-color: #5C5C5C;"  >
+    <a href="anasayfa.html">Anasayfa</a>
+    <a href="onecıkanlar.html">Öne Çıkanlar</a>
+    <a href="kategori.html">Kampanyalar</a>
+    <a href="yorumform.html">Yorum Yap</a>
+    <a href="login.html">Giriş Yap</a>
+    <div class="animation start-home"></div></nav>
+
+    <div class="select" style=" font-size: 20px;background-color: #5C5C5C"    >
+      
+    
+    <select name="sehir" id="sehir"  onchange="redirect()"  >
+        <option value="şehir seçin">Şehir Seçiniz...</option>
+        <option value="istanbul">İstanbul</option>
+        <option value="ankara">Ankara</option>
+        <option value="Bolu">Bolu</option>
+        <option value="Adana">Adana</option>
+        <option value="Adıyaman">Adıyaman</option>
+        <option value="Afyonkarahisar">Afyonkarahisar</option>
+        <option value="Ağrı">Ağrı</option>
+        <option value="Aksaray">Aksaray</option>
+        <option value="Amasya">Amasya</option>
+        <option value="Antalya">Antalya</option>
+        <option value="Ardahan">Ardahan</option>
+        <option value="Artvin">Artvin</option>
+        <option value="Aydın">Aydın</option>
+        <option value="	Balıkesir">	Balıkesir</option>
+        <option value="Bayburt">Bayburt</option>
+        <option value="Bilecik">Bilecik</option>
+        <option value="Bingöl">Bingöl</option>
+        <option value="Bitlis">Bitlis</option>
+        <option value="	Burdur">Burdur</option>
+        <option value="Bursa">Bursa</option>
+        <option value="Çanakkale">Çanakkale</option>
+        <option value="Çankırı">Çankırı</option>
+        <option value="Denizli">Denizli</option>
+        <option value="	Diyarbakır">Diyarbakır</option>
+        <option value="Düzce">Düzce</option>
+        <option value="	Edirne">Edirne</option>
+        <option value="	Elazığ">Elazığ</option>
+        <option value="Erzincan">Erzincan</option>
+        <option value="Erzurum">Erzurum</option>
+        <option value="	Eskişehir">	Eskişehir</option>
+        <option value="Gaziantep">Gaziantep</option>
+        <option value="Giresun">Giresun</option>
+        <option value="Gümüşhane">Gümüşhane</option>
+        <option value="Hakkari">Hakkari</option>
+        <option value="Hatay">Hatay</option>
+        <option value="	Iğdır">	Iğdır</option>
+        <option value="	Isparta">Isparta</option>
+        <option value="İzmir">İzmir</option>
+        <option value="Kahramanmaraş">Kahramanmaraş</option>
+        <option value="	Karaman">Karaman</option>
+        <option value="Kars">Kars</option>
+        <option value="Kastamonu">Kastamonu</option>
+        <option value="	Kayseri">Kayseri</option>
+        <option value="Kilis">Kilis</option>
+        <option value="	Kırıkkale">Kırıkkale</option>
+        <option value="	Kırklareli">Kırklareli</option>
+    </select></div>
+    
+
+    
+</div>
+<div class="container">
+<main >
+    <div class="sagiçerik">
+        <H2><div class="owlname"> <a href="onerimekanlar.html" > Tavsiye Edilen Mekanlar</a></div></H2>
+        <div class="owl-carousel owl-theme" style="width: 1100px; height: 300px;" >
+          <div class="mekangörsel"> <img src="../mekanlar/istanbul/mikla/yemek2.jpg"  style="width: 100%; height: 180px; object-fit: cover;"  />
+            <h4><a href="../kod/mekanlar/mikla.html" >MİKLA / İstanbul</a></h4>
+        </div>
+          <div class="mekangörsel"> <img src="../mekanlar/antalya/7mehmet/yemek7.png" style="width: 100%; height: 180px; object-fit: cover;" /> 
+            <h4><a href="../kod/mekanlar/7mehmet.html">7 MEHMET / Antalya</a></h4></div>
+          
+            <div class="mekangörsel"> <img src="../mekanlar/trabzon/nihatusta/yemek4.jpg" style="width: 100%; height:  180px; object-fit: cover;" />
+              <h4><a href="../kod/mekanlar/nihatusta.html">NİHAT USTA / Trabzon</a></h4>
+          </div>
+            <div class="mekangörsel"> <img src="../mekanlar/ankara/kalbur/yemek1.jpg" style="width: 100%; height: 180px; object-fit: cover;"/>
+                <h4><a href="../kod/mekanlar/kalbur.html">KALBUR / Ankara</a></h4>
+            </div>
+              <div class="mekangörsel"> <img src="../mekanlar/izmir/ferdibaba/ortam2.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> 
+                <h4><a href="../kod/mekanlar/ferdibaba.html">FERDİ BABA / İzmir</a></h4></div>
+              
+              <div class="mekangörsel"> <img src="../mekanlar/istanbul/hünkar/ortam5.jpg" style="width: 100%; height:  180px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/hunkar.html">HÜNKAR / İstanbul</a></h4></div>
+                <div class="mekangörsel"> <img src="../mekanlar/gaziantep/halil usta/yemek1.JPG" style="width: 100%; height:  180px; object-fit: cover;" /> 
+                  <h4><a href="../kod/mekanlar/halilusta.html">HALİL USTA / Gaziantep</a></h4></div>
+          
+                
+                  <div class="mekangörsel"> <img src="../mekanlar/izmir/deniz/ortam2.jpg" style="width: 100%; height: 180px; object-fit: cover;" /> 
+                    <h4><a href="../kod/mekanlar/deniz.html">DENİZ RESTAURANT / İzmir</a></h4></div>
+                  
+                  <div class="mekangörsel"> <img src="../mekanlar/istanbul/sofram/ortam1.jpg" style="width: 100%; height:  180px; object-fit: cover;" /> 
+                    <h4><a href="../kod/mekanlar/sofram.html">SOFRAM BALIK / İstanbul</a></h4></div>
+          
+        </div>
+
+        <H2><div class="owlname"> <a href="onerimekanlar.html"> Beğenilen Kafeler</a></div></H2>
+        <div class="owl-carousel owl-theme" style="width: 1100px; height: 300px;" >
+          <div> <img src="../mekanlar/istanbul/kafe/Patisserie De Pera/7.jpg"  style="width: 100%; height: 180px; object-fit: cover;"  />
+            <h4><a href="../kod/mekanlar/pera.html">PATİSSERİE DE PERA/ İstanbul</a></h4>
+        </div>
+          
+          <div> <img src="../mekanlar/ankara/kukis/3.jpg" style="width: 100%; height:  180px; object-fit: cover;" /> 
+            <h4><a href="../kod/mekanlar/kukis.html">KUKİS/ Ankara </a></h4></div>
+    
+            <div> <img src="../mekanlar/bodrum/limon/1.jpg" style="width: 100%; height: 180px; object-fit: cover;"/>
+                <h4><a href="../kod/mekanlar/limon.html">LİMON / Bodrum</a></h4>
+            </div>
+              <div> <img src="../mekanlar/istanbul/cafedeparis/2.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> 
+                <h4><a href="../kod/mekanlar/cafedeparis.html">CAFE DE PARİS / İstanbul </a></h4></div>
+              
+                  <div><img src="../mekanlar/istanbul/kafe/The Allis Istanbul/8.jpg" style="width: 100%; height: 180px; object-fit: cover;" /> 
+                    <h4><a href="../kod/mekanlar/allis.html">THE ALLİS / İstanbul</a></h4></div>
+                  
+                  <div> <img src="../mekanlar/eskişehir/roots/q.jpeg" style="width: 100%; height:  180px; object-fit: cover;" /> 
+                    <h4><a href="../kod/mekanlar/theroots.html">THE ROOTS / Eskişehir</a></h4></div>
+                    <div> <img src="../mekanlar/kocaeli/1.jpg" style="width: 100%; height:  180px; object-fit: cover;" />
+                      <h4><a href="../kod/mekanlar/hosgor.html"> HOŞGÖR / Kocaeli</a></h4>
+                  </div>
+        </div>
+
+        <H2><div class="owlname"> <a href="onerimekanlar.html"> Makarna Mekanları</a></div></H2>
+        <div class="owl-carousel owl-theme" style="width: 1100px; height: 300px;" >
+          <div><img src="../mekanlar/istanbul/yammi/3.jpg"  style="width: 100%; height: 180px; object-fit: cover;"  />
+            <h4><a href="../kod/mekanlar/yami.html">YAMMİ / İstanbul</a></h4>
+        </div>
+          <div> <img src="../mekanlar/bodrum/cookshop/1.jpg" style="width: 100%; height: 180px; object-fit: cover;" /> 
+            <h4><a href="../kod/mekanlar/cookshop.html">COOKSHOOP / Bodrum</a></h4></div>
+          
+          <div> <img src="../mekanlar/ankara/numnum/3.jpg" style="width: 100%; height:  180px; object-fit: cover;" /> 
+            <h4><a href="../kod/mekanlar/numnum.html">NUMNUM / Ankara</a></h4></div>
+    
+            
+              <div> <img src="../mekanlar/istanbul/kahvaltı/The House Caf/12.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> 
+                <h4><a href="../kod/mekanlar/thehouse.html">THE HOUSE CAFE / İstanbul</a></h4></div>
+              
+              <div> <img src="../mekanlar/istanbul/happymoons/1.webp" style="width: 100%; height:  180px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/happymoons.html">HAPPY MOON'S / İstanbul</a></h4></div>
+    
+               
+        </div>
+
+        <H2><div class="owlname"> <a href="onerimekanlar.html"> Balık Restoranları</a></div></H2>
+        <div class="owl-carousel owl-theme" style="width: 1100px; height: 300px;" >
+          <div> <img src="../mekanlar/ankara/trilye/6.jpg"  style="width: 100%; height: 180px; object-fit: cover;"  />
+            <h4><a href="../kod/mekanlar/trilye.html">TRİLYE / Ankara</a></h4>
+        </div>
+        <div> <img src="../mekanlar/izmir/deniz/yemek2.jpg" style="width: 100%; height: 180px; object-fit: cover;" /> 
+          <h4><a href="../kod/mekanlar/deniz.html">DENİZ RESTAURANT / İzmir</a></h4></div>
+        
+          <div> <img src="../mekanlar/bodrum/mimoza/4.jpg" style="width: 100%; height:  180px; object-fit: cover;" /> 
+            <h4><a href="../kod/mekanlar/mimoza.html">MİMOZA / Muğla</a></h4></div>
+    
+            <div> <img src="../mekanlar/ankara/chefbros/1.jpg" style="width: 100%; height:  180px; object-fit: cover;" />
+              <h4><a href="../kod/mekanlar/chefbros.html">CHEF BRO'S / Ankara</a></h4>
+          </div>
+
+            <div> <img src="../mekanlar/ankara/baynihat/5.jpg" style="width: 100%; height: 180px; object-fit: cover;"/>
+                <h4><a href="../kod/mekanlar/baynihat.html">BAY NİHAT / Balıkesir</a></h4>
+            </div>
+              <div> <img src="../mekanlar/izmir/ferdibaba/yemek2.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> 
+                <h4><a href="../kod/mekanlar/ferdibaba.html">FERDİ BABA / İzmir</a></h4></div>
+              
+                <div> <img src="../mekanlar/istanbul/sofram/yemek2.jpg" style="width: 100%; height:  180px; object-fit: cover;" /> 
+                  <h4><a href="../kod/mekanlar/sofram.html">SOFRAM BALIK / İstanbul</a></h4></div>
+        
+                
+                  
+                
+        </div>
+
+        <H2><div class="owlname"> <a href="onerimekanlar.html"> Hamburger Mekanları</a></div></H2>
+        <div class="owl-carousel owl-theme" style="width: 1100px; height: 300px;" >
+          <div> <img src="../mekanlar/istanbul/baltazar/3.jpg"  style="width: 100%; height: 180px; object-fit: cover;"  />
+            <h4><a href="../kod/mekanlar/baltazar.html">BALTAZAR / İstanbul</a></h4>
+        </div>
+          <div> <img src="../mekanlar/izmir/ohannes/5.jpg" style="width: 100%; height: 180px; object-fit: cover;" /> 
+            <h4><a href="../kod/mekanlar/ohannes.html">OHANNES BURGER / İzmir</a></h4></div>
+          
+          <div> <img src="../mekanlar/antalya/route/1.jpg" style="width: 100%; height:  180px; object-fit: cover;" /> 
+            <h4><a href="../kod/mekanlar/route.html">ROUTE BURGER HOUSE / Antalya</a></h4></div>
+    
+            <div> <img src="../mekanlar/ankara/franco/1.jpg" style="width: 100%; height: 180px; object-fit: cover;"/>
+                <h4><a href="../kod/mekanlar/franco.html">FRANCO BURGER / Ankara</a></h4>
+            </div>
+              <div> <img src="../mekanlar/ankara/bigbaker/4.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> 
+                <h4><a href="../kod/mekanlar/bigbaker.html">BİG BAKER / Ankara</a></h4></div>
+              
+              <div> <img src="../mekanlar/istanbul/joint/1.jpg" style="width: 100%; height:  180px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/joint.html">BURGER JOİNT / İstanbul</a></h4></div>
+    
+                
+        </div> 
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $('.owl-carousel').owlCarousel({
+            items:4,
+            margin:35,
+            
+    
+            
+        
+          });
+          
+        });
+        </script>
+    </div>
+    
+    
+<TABLE ALIGN=left  style="width: 250px; height: 1000px; padding-left: 50px;margin-top: 20px;">
+  <TR> <TD><img src="../resimler/reklam1.png" width="250" height="200"></TD>
+      </TR>
+  <TR> <TD><img src="../resimler/reklam2.jpg" width="250"></TD>
+  </TR>
+  <TR>
+  <TD><img src="../resimler/reklam3.jpg "width="250"></TD>
+  </TR>
+  <TR>
+    <TD><img src="../resimler/reklam4.jpg" width="250"></TD>
+    </TR>
+  </TABLE>
+  
+</div>
+</main>
+
+
+<footer >
+<div class="footer">
+
+  <div class="footer_container">
+ 
+    <div id="kutu">
+      <b>Sayfalar</b>
+      <ul>
+        <li><a href="anasayfa.html" ></a>Ana Sayfa</li>
+        <li><a href="kategori.html"></a>Kampanyalar</li>
+        <li><a href="mekanlar.html" ></a>Mekanlar</li>
+        
+        <li><a href="mailto:info@gmail.com"></a>İletişim</li>
+      </ul>
+    </div>
+
+    <div id="kutu" style="margin-left:150px;">
+      <b>İletişim</b>
+      <ul>
+        <li>Havva Beyza Bir</li>
+        <li>C: 0 507 016 74 35</li>
+        <li>M:havvabeyza1499@gmail.com</li>
+        
+      </ul>
+    </div>
+   
+    <div id="kutu" style="margin-left:150px;">
+      <b>Sosyal Medya</b>
+      <ul>
+        <li><img src="../resimler/instgramlogo.png" style="width: 27px;"></li>
+        <li><img src="../resimler/facebooklogo (1).png" style="width: 27px;"></li>
+        <li><img src="../resimler/twitterlogo.png" style="width: 23px;"></li>
+      </ul>
+    </div>
+   
+  </div>
+ 
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

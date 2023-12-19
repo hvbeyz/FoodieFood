@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İstanbul Mekanlar - Foodie Food</title> <link rel="icon" href="../resimler/ico.ico" type="image/x-icon">
+    <style type="text/css">
+      html{
+            text-decoration: none;
+            
+            color: white;
+            cursor: pointer;
+            font-family: sans-serif;
+            
+        }
+      .container {
+        margin-left: 200px;
+    display: block;
+    position: relative;
+    background-color: #5C5C5C;
+    margin-top: 20px;
+    
+    }
+    .solicerik {
+    width: 20%;
+    float: left;
+    margin-top:17px;
+    
+    
+   } 
+    .lns-checkbox {
+    display: inline-flex;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    
+    
+    align-items: center;
+   
+    border-radius: 9px;
+    background-color:#5C5C5C;
+    padding: 10px 7px 5px 7px;
+    -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    }
+    @media (min-width: 100px) {
+    .lns-checkbox {
+        font-size: 13px;;
+    }
+    }
+    .lns-checkbox span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    }
+    .lns-checkbox input[type=checkbox] {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 2px;
+    width: 2px;
+    overflow: hidden;
+    }
+    .lns-checkbox input[type=checkbox]:checked + span::after {
+    background-color: #5C5C5C;
+    }
+    .lns-checkbox input[type=checkbox]:checked + span {
+    color: var(--color-accent);
+    }
+    .lns-checkbox input[type=checkbox]:focus + span::before {
+    border-color: var(--color-accent);
+    }
+    .lns-checkbox input[type=checkbox]:disabled {
+    opacity: 0.85;
+    }
+    .lns-checkbox input[type=checkbox]:disabled + span {
+    color:#EFC551;
+    }
+    .lns-checkbox span::before {
+    content: "";
+    display: inline-block;
+    border-radius: 9px;
+    background-color: #ffffff;
+    margin-right: 8px;
+    height: 16px;
+    width: 16px;
+    border: 1px solid#5C5C5C;
+    }
+    .lns-checkbox span::after {
+    content: "";
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 9px;
+    background-color: #EFC551;
+    left: 3px;
+    position: absolute;
+    }
+    :root {
+    --color-one: #52117d;
+    --color-two: #a944ec;
+    --color-three: #ffffff;
+    --color-accent: #ffffff;
+    --color-text: #ffffff;
+    --color-bg: #181729;
+            /* Typography */
+    --font-family: "Inter", sans-serif;
+    --font-family-headings: "Inter", sans-serif;
+    }
+    .restaurant-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .sagiçerik img{
+  box-sizing: border-box;
+  border-left-width: 7px  solid #747272;
+  margin-top: 0px;
+  box-shadow: 5px 5px 29px 0px #000000;
+  
+  
+ 
+}
+.sagiçerik p{
+  margin-top: 0px;
+  
+}
+.sagiçerik h3{
+    background-color: #646464;
+    text-align: left;
+    padding-left: 6px;
+    margin-bottom: 0px;
+    display: block;
+   font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 0px;
+    line-height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    border-left: 7px solid #EFC551;
+    
+    box-shadow: 3px 5px 15px 0px #414141;
+
+    
+}
+.sagiçerik {
+    width: 80%;
+    margin-left: 250px;
+   
+}
+.sagiçerik a{
+   background-color: transparent;
+    text-align: left;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    width: 200px;
+    text-decoration: solid;
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    margin-top: 0px;
+    line-height: 45px;
+    overflow: hidden;
+   
+    color: #ffffff;
+    
+    
+
+}
+nav {
+            margin: 20px auto 0;
+         
+            position: relative;
+            width: 750px;
+            height: 50px;
+            background-color: #5C5C5C;
+            
+            font-size: 0;
+        }
+        nav a {
+            line-height: 50px;
+            height: 100%;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+        nav .animation {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease 0s;
+        }
+        a:nth-child(1) {
+            width: 150px;
+        }
+        a:nth-child(2) {
+            width: 150px;
+        }
+        a:nth-child(3) {
+            width: 150px;
+        }
+        a:nth-child(4) {
+            width: 150px;
+        }
+        a:nth-child(5) {
+            width: 150px;
+        }
+        nav .start-home, a:nth-child(1):hover~.animation {
+            width: 150px;
+            left: 0;
+            background-color: #EFC551;
+        }
+        nav .start-about, a:nth-child(2):hover~.animation {
+            width: 150px;
+            left: 150px;
+            background-color: #EFC551;
+        }
+        nav .start-blog, a:nth-child(3):hover~.animation {
+            width: 150px;
+            left: 300px;
+            background-color:#EFC551;
+        }
+        nav .start-portefolio, a:nth-child(4):hover~.animation {
+            width: 150px;
+            left: 450px;
+            background-color: #EFC551;
+        }
+        nav .start-contact, a:nth-child(5):hover~.animation {
+            width: 150px;
+            left: 600px;
+            background-color: #EFC551;
+        }
+        .footer { background:#333333;width:100%; height:200px;float:left;color:white; font-family:arial; margin-top: 35px;} 
+		.footer #kutu b {font-size:14px;}
+		* {margin:0px;padding:0px;}
+		.footer_container{width:768px; height:175px; margin:30px auto;}
+		ul {list-style-type:none;margin:17px 0;padding:0px;}
+		#kutu {width:auto; height:125px; float:left;}
+		ul li {float:left;font-family:tahoma; font-size:12px; margin-bottom:8px; clear:left; color:#949798; }
+		#kutu:last-child li {float:left;clear:none;margin-right:10px;}
+    .beyazlogo{
+            border-radius: 50%; 
+            padding: 5px; 
+            margin-left: 20px;}
+    H2{
+    background-color: #646464;
+    text-align: center;
+    width: 680px;
+    padding-left:50%;
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    line-height: 45px;
+    overflow: hidden;
+    box-shadow: 5px 5px 29px 0px #444444;
+    border-bottom: 3px solid #EFC551;
+    }
+ 
+
+</style>
+
+</head>
+<body style="background-color:#646464 ;">
+  <nav  style="background-color: #5C5C5C;"  >
+    <a href="anasayfa.html">Anasayfa</a>
+    <a href="onecıkanlar">Öne Çıkanlar</a>
+    <a href="kategori.html">Kampanyalar</a>
+    <a href="yorumform.html">Yorum Yap</a>
+    <a href="login.html">Giriş Yap</a>
+    <div class="animation start-home"></div></nav>
+  <div class="container" >
+    <div class="solicerik" id="seçenekler "style="background-color:#5C5C5C; width: 200px; height: 950px;">
+
+  <div id="filtresecenek">
+    <img src="../resimler/beyazlogo.png"  class="beyazlogo" style="padding: 25px; " width="150px" height="150px" >
+    <label class="lns-checkbox">
+        <input type="checkbox"  id="kafeCheckbox" value="kafe">
+        <span> <label for="kafeCheckbox">Kafe</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="restoranCheckbox" value="restoran">
+        <span>  <label for="restoranCheckbox">Restoran</label></span></label>
+        <br><hr>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="breakfastCheckbox" value="breakfast">
+        <span>   <label for="breakfastCheckbox">Kahvaltı</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="lunchCheckbox" value="lunch">
+        <span> <label for="lunchCheckbox">Öğle Yemeği</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="dinnerCheckbox" value="dinner">
+        <span>  <label for="dinnerCheckbox">Akşam Yemeği</label></span></label>
+        <br><hr>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="uygunCheckbox" value="Uygun">
+        <span>  <label for="uygunCheckbox">Uygun Fiyatlı</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="ortCheckbox" value="ort">
+        <span> <label for="ortCheckbox">Ortalama Fiyat</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="lüxCheckbox" value="lüx">
+        <span> <label for="lüxCheckbox">Lüx</label></span></label>
+        <br><hr>
+        
+        <label class="lns-checkbox">
+        <input type="checkbox" id="romantikCheckbox" value="romantik">
+        <span> <label for="romantikCheckbox">Romantik Yemek</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="aileCheckbox" value="aile">
+        <span><label for="aileCheckbox">Aile Yemeği</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="topluCheckbox" value="toplu">
+        <span><label for="topluCheckbox">Toplu Yemek</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="kidsCheckbox" value="kids">
+        <span><label for="kidsCheckbox">Çocuklu Yemek</label></span></label>
+        <br>
+        <hr>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="alkolCheckbox" value="alkol">
+        <span><label for="alkolCheckbox">Alkollü</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="alkolsuzCheckbox" value="alkolsuz">
+        <span><label for="alkolsuzCheckbox">Alkolsuz</label></span></label>
+        
+      
+        <br><hr>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="ettavukCheckbox" value="ettavuk">
+        <span><label for="ettavukCheckbox">Et & Tavuk</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="salataCheckbox" value="salata">
+        <span><label for="salataCheckbox">Salata</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="makarnaCheckbox" value="makarna">
+        <span><label for="makarnaCheckbox">Makarna</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="fastfoodCheckbox" value="fastfood">
+        <span><label for="fastfoodCheckbox">Fast Food</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="denizCheckbox" value="deniz">
+        <span><label for="denizCheckbox">Deniz Mahsülleri</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="tatlıCheckbox" value="tatlı">
+        <span><label for="tatlıCheckbox">Tatlı</label></span></label>
+        <br>
+        <label class="lns-checkbox">
+        <input type="checkbox" id="kahveCheckbox" value="kahve">
+        <span><label for="kahveCheckbox">Kahve</label></span></label>
+       
+      </div> </div>
+      <br> 
+      
+
+      
+      <div class="sagiçerik "  style=" font-size: 20px;background-color: #646464"    >
+        <H2 ><a href="onerimekanlar.html" class="başlık" style="background-color:#646464 ; font-size: 23px; color: #cacaca;; ">İstanbul</a></H2>
+        <div id="restaurantList"class="restaurant-container">
+        <div class="restaurant " data-meal="alkol deniz salata lunch makarna fastfood ettavuk restoran Uygun ort toplu kafe">
+          <h3><a href="../kod/mekanlar/altıyol.html"> Altıyol Sanat Cafe</a></h3>
+          <p><img src="../mekanlar/istanbul/kafe/altıyol/1.jpg" style="width: 100%; height: 180px; object-fit: cover;"/></p>
+        </div>
+
+        <div class="restaurant" data-meal=" alkolsuz tatlı kahve kafe ort Uygun romantik aile kids ">
+          <h3><a href="../kod/mekanlar/JadoreChocolatier.html">J'adore Chocolatier </a></h3>
+          <p><img src="../mekanlar/istanbul/kafe/J'adore Chocolatier/1.jpg"style="width: 100%; height: 180px; object-fit: cover;"/></p>
+        </div>
+
+        <div class="restaurant" data-meal="breakfast kahve tatlı alkolsuz kafe Uygun ort romantik aile kids toplu
+        ">
+          <h3><a href="../kod/mekanlar/konakkafe.html">Konak Kafe</a></h3>
+          <p> <img src="../mekanlar/istanbul/kafe/konak/1.jpg"style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+        </div>
+
+        <div class="restaurant" data-meal="alkol fastfood ettavuk kafe Uygun ort toplu dinner lunch">
+            <h3><a href="../kod/mekanlar/benzin.html">Benzin Kafe</a></h3>
+            <p><img src="../mekanlar/istanbul/kafe/benzin/1.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+
+          <div class="restaurant" data-meal="tatlı breakfast kahve ettavuk salata makarna alkolsuz kafe lunch dinner romantik aile kids toplu">
+            <h3><a href="../kod/mekanlar/cadıköy.html">Cadıköy</a></h3>
+            <p><img src="../mekanlar/istanbul/kafe/cadı/1.jpg"style="width: 100%; height: 180px; object-fit: cover;" /> </p>
+          </div>
+
+          <div class="restaurant" data-meal="breakfast ettavuk kahve alkolsuz restoran dinner lunch">
+            <h3><a href="../kod/mekanlar/ehlikeyf.html">Ehli Keyf Cafe </a></h3>
+            <p><img src="../mekanlar/istanbul/kafe/Ehli Keyf Cafe/0.jpg"style="width: 100%; height: 180px; object-fit: cover;"/></p>
+          </div>
+
+          <div class="restaurant" data-meal="kahve tatlı alkolsuz kafe toplu kids aile romantik Uygun ort ">
+            <h3><a href="../kod/mekanlar/mandabatmaz.html">Mandabatmaz</a></h3>
+            <p>  <img src="../mekanlar/istanbul/kafe/Mandabatmaz/7.jpg"style="width: 100%; height: 180px; object-fit: cover;" /></p>
+          </div>
+
+          
+          <div class="restaurant" data-meal="breakfast kahve alkolsuz toplu kids aile romantik Uygun ort ">
+            <h3><a href="../kod/mekanlar/PoikaCoffee.html">Poika Coffee</a></h3>
+            <p> <img src="../mekanlar/istanbul/kafe/Poika Coffee/3.jpg" style="width: 100%; height: 180px; object-fit: cover;"/></p>
+          </div>
+
+          
+          <div class="restaurant" data-meal="breakfast tatlı  aile kids restoran kafe toplu kids aile romantik Uygun ort">
+            <h3><a href="../kod/mekanlar/Naftalin.html">Cafe Naftalin</a></h3>
+            <p> <img src="../mekanlar/istanbul/kafe/Cafe Naftalin K/7.jpg"style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+          <!--  -->
+          <div class="restaurant" data-meal="breakfast toplu kids aile romantik lüx restoran kafe alkol deniz salata tatlı kahve ettavuk lunch dinner ">
+            <h3><a href="../kod/mekanlar/gazebo.html">Gazebo Lounge</a></h3>
+            <p><img src="../mekanlar/istanbul/kafe/Gazebo Lounge/3.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+
+          <div class="restaurant" data-meal="breakfast toplu aile kids restoran lüx ort kahve tatlı salata ettavuk alkol kafe lunch dinner">
+            <h3><a href="../kod/mekanlar/allis.html">The Allis</a></h3>
+            <p> <img src="../mekanlar/istanbul/kafe/The Allis Istanbul/2.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+
+          <div class="restaurant" data-meal=" toplu aile kids restoran alkol tatlı kahve ettavuk deniz salata makarna kafe lüx lunch dinner" >
+            <h3><a href="../kod/mekanlar/beymen.html">Beymen Brasserie</a></h3>
+            <p>  <img src="../mekanlar/istanbul/kafe/Beymen Brasserie/1.jpeg" style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+          <div class="restaurant" data-meal="breakfast aile kids  tatlı kahve alkolsuz toplu Uygun ort lüx kafe ">
+            <h3><a href="../kod/mekanlar/kandilli.html">Kandilli Pastanesi</a></h3>
+            <p> <img src="../mekanlar/istanbul/kafe/Kandilli Pastanesi/2.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+          <div class="restaurant" data-meal=" aile kids restoran lüx toplu deniz alkol ettavuk fastfood makarna Kahve tatlı salata lunch dinner ">
+            <h3><a href="../kod/mekanlar/greytopagaci.html">Grey Topağacı</a></h3>
+            <p><img src="../mekanlar/istanbul/kafe/Grey Topağacı/1.jpg" style="width: 100%; height: 180px; object-fit: cover;" /> </p>
+          </div>
+          <div class="restaurant" data-meal="breakfast aile kids kafe kahve tatlı alkolsuz lüx">
+            <h3><a href="../kod/mekanlar/pera.html">Patisserie De Pera</a></h3>
+            <p> <img src="../mekanlar/istanbul/kafe/Patisserie De Pera/2.jpg"style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+          <div class="restaurant" data-meal="breakfast aile kids toplu kafe tatlı kahve Uygun lüx">
+            <h3><a href="../kod/mekanlar/lune.html">La Patisserie Lune</a></h3>
+            <p> <img src="../mekanlar/istanbul/kafe/La Patisserie Lune/5.jpg"  style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+          <div class="restaurant" data-meal="breakfast aile kids restoran kafe toplu alkolsuz ettavuk tatlı kahve lüx lunch dinner">
+            <h3><a href="../kod/mekanlar/dogaciyiz.html">Doğacıyız Gourmet</a></h3>
+            <p> <img src="../mekanlar/istanbul/kahvaltı/Doğacıyız Gourmet & Cafe/4.jpg"style="width: 100%; height: 180px; object-fit: cover;" /> </p>
+          </div>
+          <div class="restaurant" data-meal="breakfast aile kids restoran kafe lüx Uygun alkolsuz toplu kahve tatlı fastfood makarna salata ettavuk lunch dinner ">
+            <h3><a href="../kod/mekanlar/emirgan.html">Emirgan Sütiş</a></h3>
+            <p>  <img src="../mekanlar/istanbul/kahvaltı/Emirgan Sütiş/3.jpg"style="width: 100%; height: 180px; object-fit: cover;" /> </p>
+          </div>
+          <div class="restaurant" data-meal=" aile kids restoran deniz alkol tatlı kahve toplu lüx salata ettavuk kafe lunch dinner">
+            <h3><a href="../kod/mekanlar/feriye.html">Feriye Sarayı</a></h3>
+            <p> <img src="../mekanlar/istanbul/kahvaltı/Feriye Sarayı/5.jpg"style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+          <div class="restaurant" data-meal="breakfast aile kids restoran kafe toplu Uygun ort alkolsuz">
+            <h3><a href="../kod/mekanlar/havvahanım.html">Havva Hanım Kahvaltı</a></h3>
+            <p><img src="../mekanlar/istanbul/kahvaltı/Havva Hanım Balaturka/2.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+          <div class="restaurant" data-meal="breakfast aile kids toplu restoran kahve ettavuk fastfood salata tatlı alkolsuz Uygun ort lüx  lunch dinner">
+            <h3><a href="../kod/mekanlar/kale.html">Kale Cafe</a></h3>
+            <p> <img src="../mekanlar/istanbul/kahvaltı/Kale Cafe & Restaurant/1.jpg"style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+         
+          <div class="restaurant" data-meal="breakfast aile kids restoran fastfood deniz lunch dinner alkol lüx salata ettavuk toplu kafe">
+            <h3><a href="../kod/mekanlar/mihriban.html">Mihrabat Korusu</a></h3>
+            <p> <img src="../mekanlar/istanbul/kahvaltı/Mihrabat Korusu/8.jpg"  style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+           <!--  -->
+          <div class="restaurant" data-meal="breakfast aile kids restoran lunch ort lüx alkolsuz toplu ">
+            <h3><a href="../kod/mekanlar/mükellef.html">Mükellef</a></h3>
+            <p> <img src="../mekanlar/istanbul/kahvaltı/Mükellef/8.jpg"  style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+          <div class="restaurant" data-meal="breakfast aile kids restoran Uygun ort breakfast lunch alkolsuz ">
+            <h3><a href="../kod/mekanlar/thehouse.html">The House Caf</a></h3>
+            <p> <img src="../mekanlar/istanbul/kahvaltı/The House Caf/4.jpg" style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div>
+          <div class="restaurant" data-meal="breakfast aile kids restoran Uygun kafe  ">
+            <h3><a href="../kod/mekanlar/yumma.html">Yumma</a></h3>
+            <p><img src="../mekanlar/istanbul/kahvaltı/Yumma/3.jpg"   style="width: 100%; height: 180px; object-fit: cover;"/> </p>
+          </div></div>
+        </div></div>
+        </section>
+
+
+        
+          <script> function filterRestaurants() {
+            var breakfastCheckbox = document.getElementById('breakfastCheckbox');
+            var lunchCheckbox = document.getElementById('lunchCheckbox');
+            var dinnerCheckbox = document.getElementById('dinnerCheckbox');
+            var kafeCheckbox = document.getElementById('kafeCheckbox');
+            var restoranCheckbox = document.getElementById('restoranCheckbox');
+            var uygunCheckbox = document.getElementById('uygunCheckbox');
+            var ortCheckbox = document.getElementById('ortCheckbox');
+            var lüxCheckbox = document.getElementById('lüxCheckbox');
+            var romantikCheckbox = document.getElementById('romantikCheckbox');
+            var aileCheckbox = document.getElementById('aileCheckbox');
+            var topluCheckbox = document.getElementById('topluCheckbox');
+            var kidsCheckbox = document.getElementById('kidsCheckbox');
+            var alkolCheckbox = document.getElementById('alkolCheckbox');
+            var alkolsuzCheckbox = document.getElementById('alkolsuzCheckbox');
+            var ettavukCheckbox = document.getElementById('ettavukCheckbox');
+            var salataCheckbox = document.getElementById('salataCheckbox');
+            var makarnaCheckbox = document.getElementById('makarnaCheckbox');
+            var fastfoodCheckbox = document.getElementById('fastfoodCheckbox');
+            var denizCheckbox = document.getElementById('denizCheckbox');
+            var tatlıCheckbox = document.getElementById('tatlıCheckbox');
+            var kahveCheckbox = document.getElementById('kahveCheckbox');
+            var restaurants = document.getElementsByClassName('restaurant');
+          
+            for (var i = 0; i < restaurants.length; i++) {
+              var restaurant = restaurants[i];
+              var meal = restaurant.getAttribute('data-meal'); 
+              if ((breakfastCheckbox.checked && meal.includes('breakfast')) ||
+                  (lunchCheckbox.checked && meal.includes('lunch')) ||
+                  (dinnerCheckbox.checked && meal.includes('dinner')) ||
+                  (kafeCheckbox.checked && meal.includes('kafe')) ||
+                  (restoranCheckbox.checked && meal.includes('restoran')) ||
+                  (uygunCheckbox.checked && meal.includes('Uygun')) ||
+                  (ortCheckbox.checked && meal.includes('ort')) ||
+                  (lüxCheckbox.checked && meal.includes('lüx')) ||
+                  (romantikCheckbox.checked && meal.includes('romantik')) ||
+                  (aileCheckbox.checked && meal.includes('aile')) ||
+                  (topluCheckbox.checked && meal.includes('toplu')) ||
+                  (kidsCheckbox.checked && meal.includes('kids')) ||
+                  (alkolCheckbox.checked && meal.includes('alkol')) ||
+                  (alkolsuzCheckbox.checked && meal.includes('alkolsuz')) ||
+                  (ettavukCheckbox.checked && meal.includes('ettavuk')) ||
+                  (makarnaCheckbox.checked && meal.includes('makarna')) ||
+                  (salataCheckbox.checked && meal.includes('salata')) ||
+                  (denizCheckbox.checked && meal.includes('deniz')) ||
+                  (fastfoodCheckbox.checked && meal.includes('fastfood'))||
+                  (tatlıCheckbox.checked && meal.includes('tatlı'))||
+                  (kahveCheckbox.checked && meal.includes('kahve'))
+              ) {
+                restaurant.style.display = '';
+              } else {
+                restaurant.style.display = 'none';
+              }
+            }
+          }
+          var checkboxes = document.querySelectorAll('#filtresecenek input[type="checkbox"]');
+          var filterButton = document.getElementById('filterButton');         
+          checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener('change', filterRestaurants);
+          });          
+          filterButton.addEventListener('click', filterRestaurants);         
+            </script>
+        
+      
+      
+        <footer >
+          <div class="footer">
+          
+            <div class="footer_container">
+           
+              <div id="kutu">
+                <b>Sayfalar</b>
+                <ul>
+                  <li><a href="anasayfa.html" ></a>Ana Sayfa</li>
+                  <li><a href="kategori.html"></a>Kampanyalar</li>
+                  <li><a href="mekanlar.html" ></a>Mekanlar</li>
+                  
+                  <li><a href="mailto:info@gmail.com"></a>İletişim</li>
+                </ul>
+              </div>
+          
+              <div id="kutu" style="margin-left:150px;">
+                <b>İletişim</b>
+                <ul>
+                  <li>Havva Beyza Bir</li>
+                  <li>C: 0 507 016 74 35</li>
+                  <li>M:havvabeyza1499@gmail.com</li>
+                  
+                </ul>
+              </div>
+             
+              <div id="kutu" style="margin-left:150px;">
+                <b>Sosyal Medya</b>
+                <ul>
+                  <li><img src="../resimler/instgramlogo.png" style="width: 27px;"></li>
+                  <li><img src="../resimler/facebooklogo (1).png" style="width: 27px;"></li>
+                  <li><img src="../resimler/twitterlogo.png" style="width: 23px;"></li>
+                </ul>
+              </div>
+             
+            </div>
+           
+          </div>
+          </footer>
+      
+        </body>
+</html>

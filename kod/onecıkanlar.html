@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampanyalar - Foodie Food</title><link rel="icon" href="../resimler/ico.ico" type="image/x-icon">
+<style>
+     html{
+            text-decoration: none;
+            
+            color: white;
+            cursor: pointer;
+            font-family: sans-serif;
+            
+        }
+        nav {
+            margin: 20px auto 0;
+         
+            position: relative;
+            width: 750px;
+            height: 50px;
+            background-color: #5C5C5C;
+            
+            font-size: 0;
+        }
+        nav a {
+            line-height: 50px;
+            height: 100%;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+        nav .animation {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease 0s;
+        }
+        a:nth-child(1) {
+            width: 150px;
+        }
+        a:nth-child(2) {
+            width: 150px;
+        }
+        a:nth-child(3) {
+            width: 150px;
+        }
+        a:nth-child(4) {
+            width: 150px;
+        }
+        a:nth-child(5) {
+            width: 150px;
+        }
+        nav .start-home, a:nth-child(1):hover~.animation {
+            width: 150px;
+            left: 0;
+            background-color: #EFC551;
+        }
+        nav .start-about, a:nth-child(2):hover~.animation {
+            width: 150px;
+            left: 150px;
+            background-color: #EFC551;
+        }
+        nav .start-blog, a:nth-child(3):hover~.animation {
+            width: 150px;
+            left: 300px;
+            background-color:#EFC551;
+        }
+        nav .start-portefolio, a:nth-child(4):hover~.animation {
+            width: 150px;
+            left: 450px;
+            background-color: #EFC551;
+        }
+        nav .start-contact, a:nth-child(5):hover~.animation {
+            width: 150px;
+            left: 600px;
+            background-color: #EFC551;
+        }
+        .footer { background:#333333;width:100%; height:200px;float:left;color:white; font-family:arial; margin-top: 55px;} 
+		.footer #kutu b {font-size:14px;}
+		* {margin:0px;padding:0px;}
+		.footer_container{width:768px; height:175px; margin:30px auto;}
+		ul {list-style-type:none;margin:17px 0;padding:0px;}
+		#kutu {width:auto; height:125px; float:left;}
+		ul li {float:left;font-family:tahoma; font-size:12px; margin-bottom:8px; clear:left; color:#949798; }
+		#kutu:last-child li {float:left;clear:none;margin-right:10px;}
+    .beyazlogo{
+            border-radius: 50%; 
+            padding: 5px; 
+            margin-left: 20px;}
+            .restoranlar {
+      display: grid;
+      grid-template-columns: repeat(4, 6fr);
+      gap: 20px;
+      width: 80%;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding: 0px;
+    }  
+  
+.restoranlar {
+    width: 80%;
+   margin-left: 120px;
+    padding-top: 0px;
+   
+    
+    
+}
+.restoranlar img{
+  box-sizing: border-box;
+  border-left-width: 7px  solid #747272;
+  margin-top: 25px;
+  box-shadow: 5px 5px 29px 0px #000000;
+  
+ 
+}
+.restoranlar h4{
+    background-color: #646464;
+    text-align: left;
+    padding-left: 6px;
+    
+    border-left: 5px solid #747272;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 0px;
+    line-height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    border-left: 7px solid #EFC551;
+    font-family: "Inter", sans-serif; 
+    width: 400px;
+    box-shadow: 5px 5px 29px 0px #444444;
+    
+    
+}
+
+.restoranlar a{
+  color: #ffffff;
+}
+
+
+a {
+    text-decoration: solid;
+}
+</style>
+</head>
+<div style="background-color:#5C5C5C" width="50" lang="100" >
+        
+    <header >
+        <table>
+            <thead>
+                <tr>
+                    <td style="text-align: left; padding-left: 80px; ;"><img src="../resimler/beyazlogo.png" alt="logo" width="180" class="beyazlogo" ></td>
+                    <td> <img src="../resimler/uzunkahve.png" alt="logo" width="1308"  ></td>
+                    <td style="text-align: right; padding-right: 80px;"><img src="../resimler/beyazlogo.png" alt="logo" width="180"  class="beyazlogo" ></td>
+                </tr>
+                </thead></table>
+    
+    </header>
+    <body style="background-color:#646464 ;">
+        <nav  style="background-color: #5C5C5C;"  >
+          <a href="anasayfa.html">Anasayfa</a>
+          <a href="onecıkanlar.html">Öne Çıkanlar</a>
+          <a href="kategori.html">Kampanyalar</a>
+          <a href="yorumform.html">Yorum Yap</a>
+          <a href="login.html">Giriş Yap</a>
+          <div class="animation start-home"></div></nav>
+          <div class="restoranlar">
+            <div class="restoran">
+                <img src="../mekanlar/ankara/bigbaker/2.jpg" style="width: 100%; height: 250px; object-fit: cover;"/> 
+                <h4><a href="../kod/mekanlar/bigbaker.html">BİG BAKER / Ankara</a></h4>
+            </div>
+            <div class="restoran"><img src="../mekanlar/trabzon/nihatusta/yemek2.jpg" style="width: 100%; height:  250px; object-fit: cover;" />
+              <h4><a href="../kod/mekanlar/nihatusta.html">NİHAT USTA / Trabzon</a></h4>
+            </div>
+            <div class="restoran"><img src="../mekanlar/bodrum/limon/6.jpg" style="width: 100%; height: 250px; object-fit: cover;"/>
+                <h4><a href="../kod/mekanlar/limon.html">LİMON / Bodrum</a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/izmir/ferdibaba/yemek1.jpg" style="width: 100%; height: 250px; object-fit: cover;"/> 
+                <h4><a href="../kod/mekanlar/ferdibaba.html">FERDİ BABA / İzmir</a></h4>
+              </div>
+              <div class="restoran"> <img src="../mekanlar/eskişehir/roots/4.jpeg" style="width: 100%; height:   250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/theroots.html">THE ROOTS / Eskişehir</a></h4>
+
+              </div>
+              <div class="restoran"><img src="../mekanlar/istanbul/kafe/The Allis Istanbul/6.jpg" style="width: 100%; height:  250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/allis.html">THE ALLİS / İstanbul</a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/izmir/deniz/yemek7.jpg" style="width: 100%; height: 250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/deniz.html">DENİZ RESTAURANT / İzmir</a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/bodrum/cookshop/2.jpg" style="width: 100%; height: 250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/cookshop.html">COOKSHOOP / Bodrum</a></h4>
+              </div>
+              <div class="restoran"> <img src="../mekanlar/ankara/franco/1.png" style="width: 100%; height:  250px; object-fit: cover;"/>
+                <h4><a href="../kod/mekanlar/franco.html">FRANCO BURGER / Ankara</a>
+              </div>
+
+              <div class="restoran"><img src="../mekanlar/izmir/ferdibaba/yemek1.jpg" style="width: 100%; height: 250px; object-fit: cover;"/> 
+                <h4><a href="../kod/mekanlar/ferdibaba.html">FERDİ BABA / İzmir</a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/istanbul/cafedeparis/4.jpg" style="width: 100%; height: 250px; object-fit: cover;"/> 
+              <h4><a href="../kod/mekanlar/cafedeparis.html">CAFE DE PARİS / İstanbul </a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/izmir/ohannes/1.jpg" style="width: 100%; height:  250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/ohannes.html">OHANNES BURGER / İzmir</a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/ankara/kukis/5.jpg" style="width: 100%; height:   250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/kukis.html">KUKİS/ Ankara </a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/istanbul/happymoons/1.jpg" style="width: 100%; height:  250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/happymoons.html">HAPPY MOON'S / İstanbul</a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/bodrum/mimoza/1.jpg" style="width: 100%; height:  250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/mimoza.html">MİMOZA / Muğla</a></h4>
+              </div>
+              
+              <div class="restoran"><img src="../mekanlar/istanbul/yammi/1.jpg"  style="width: 100%; height:  250px; object-fit: cover;"  />
+                <h4><a href="../kod/mekanlar/yami.html">YAMMİ / İstanbul</a>
+              </div>
+              <div class="restoran"><img src="../mekanlar/ankara/chefbros/2.jpg" style="width: 100%; height:  250px; object-fit: cover;" />
+                <h4><a href="../kod/mekanlar/chefbros.html">CHEF BRO'S / Ankara</a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/istanbul/kahvaltı/The House Caf/2.jpg" style="width: 100%; height:  250px; object-fit: cover;"/> 
+                <h4><a href="../kod/mekanlar/thehouse.html">THE HOUSE CAFE / İstanbul</a></h4>
+              </div>
+
+              
+              <div class="restoran"> <img src="../mekanlar/istanbul/kafe/konak/4.jpg"style="width: 100%; height:   250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/konakkafe.html">KONAK KAFE /İstanbul</a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/istanbul/kahvaltı/Doğacıyız Gourmet & Cafe/5.jpg" style="width: 100%; height:   250px; object-fit: cover;" /> 
+                <h4><a href="../kod/mekanlar/dogaciyiz.html">DOĞACIYIZ GOURMET /İstanbul</a></h4>
+              </div>
+              <div class="restoran"><img src="../mekanlar/istanbul/kafe/Patisserie De Pera/7.jpg"  style="width: 100%; height: 250px; object-fit: cover;"  />
+                <h4><a href="../kod/mekanlar/pera.html">PATİSSERİE DE PERA/ İstanbul</a></h4>
+              </div>
+            
+            
+              
+             
+
+
+          </div>
+    
+          
+          
+</body>
+<footer >
+    <div class="footer">
+    
+      <div class="footer_container">
+     
+        <div id="kutu">
+          <b>Sayfalar</b>
+          <ul>
+            <li><a href="anasayfa.html" ></a>Ana Sayfa</li>
+            <li><a href="kategori.html"></a>Kampanyalar</li>
+            <li><a href="mekanlar.html" ></a>Mekanlar</li>
+            
+            <li><a href="mailto:info@gmail.com"></a>İletişim</li>
+          </ul>
+        </div>
+    
+        <div id="kutu" style="margin-left:150px;">
+          <b>İletişim</b>
+          <ul>
+            <li>Havva Beyza Bir</li>
+            <li>C: 0 507 016 74 35</li>
+            <li>M:havvabeyza1499@gmail.com</li>
+            
+          </ul>
+        </div>
+       
+        <div id="kutu" style="margin-left:150px;">
+          <b>Sosyal Medya</b>
+          <ul>
+            <li><img src="../resimler/instgramlogo.png" style="width: 27px;"></li>
+            <li><img src="../resimler/facebooklogo (1).png" style="width: 27px;"></li>
+            <li><img src="../resimler/twitterlogo.png" style="width: 23px;"></li>
+          </ul>
+        </div>
+       
+      </div>
+     
+    </div>
+    </footer>
+</html>

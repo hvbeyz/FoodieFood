@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bay Nihat - Foodie Food</title>
+    <link rel="stylesheet" href="../owl.carousel.min.css">
+	<link rel="stylesheet" href="../owl.theme.default.min.css"> <link rel="icon" href="../../resimler/ico.ico" type="image/x-icon">
+    <style type="text/css">
+        
+        .kutu1{
+            display:block;
+            position: center;
+            flex: 1;
+            transition-duration: inherit;
+            margin-left: 20px;
+            padding: 10px;
+            background-color: bisque;
+            font-size: 15px;
+            font-family: "Inter", sans-serif;       
+            border-top: 5px solid #EFC551;
+            line-height: 35px;
+            box-shadow: 5px 5px 29px 0px #444444;
+            width: 300px;
+            height: auto;
+  
+        }
+        html{
+            text-decoration: none;
+            
+            color: white;
+            cursor: pointer;
+            font-family: "Inter", sans-serif;       
+            
+        }
+        .kutu1 a{
+            
+            text-decoration: solid;
+            color:rgb(255, 255, 255);
+
+        }
+        .kutu1 p{ text-decoration: solid;
+            color:rgb(255, 255, 255);
+            text-align: center;
+        }
+        .kutu1 h4{
+            text-align: center;
+            color:  #EFC551;
+        }
+        .kutular{
+        
+            margin-left: 300px;
+            margin-right: 300px;
+            margin-top: 150px;
+            display: flex;
+            justify-content: center;
+        
+        }
+        .footer { background:#333333;width:100%; height:200px;float:left;color:white; font-family:arial; 
+        margin-top: 100px;}
+		.footer #kutu b {font-size:14px;}
+		* {margin:0px;padding:0px;}
+		.footer_container{width:768px; height:175px; margin:30px auto;}
+		ul {list-style-type:none;margin:17px 0;padding:0px;}
+		#kutu {width:auto; height:125px; float:left;}
+		ul li {float:left;font-family:tahoma; font-size:12px; margin-bottom:8px; clear:left; color:#949798; }
+		#kutu:last-child li {float:left;clear:none;margin-right:10px; }
+        .sagiçerik {
+    width: 80%;
+    float: right;
+    padding-top: 10px;
+   
+    
+    /* Diğer özellikler buraya eklenebilir */
+}
+
+
+.sagiçerik img{
+  box-sizing: border-box;
+  border-left-width: 7px  solid #747272;
+  margin-top: 25px;
+  box-shadow: 5px 5px 29px 0px #000000;
+  
+  
+ 
+}
+.sagiçerik h4{
+    background-color: #646464;
+    text-align: left;
+    padding-left: 6px;
+    display: block;
+    border-left: 5px solid #747272;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 0px;
+    line-height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    border-left: 7px solid #EFC551;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0px 5px 3px 0px #414141;
+
+    
+}
+.owlname a{
+  background-color: #646464;
+    text-align: left;
+    width: 1090px;
+    padding-left: 10px;
+    padding-right: 939px;
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 0px;
+    line-height: 45px;
+    overflow: hidden;
+    box-shadow: 5px 5px 29px 0px #444444;
+    
+    border-bottom: 3px solid #EFC551;
+    
+
+}
+.sagiçerik a{
+  color: #ffffff;
+}
+nav {
+            margin: 10px ;
+            margin-left: 200px;
+         
+            position: relative;
+            width: 750px;
+            height: 50px;
+            background-color: #5C5C5C;
+            
+            font-size: 0;
+        }
+        nav a {
+            line-height: 50px;
+            height: 100%;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+           
+        }
+        nav .animation {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease 0s;
+        }
+        a:nth-child(1) {
+            width: 150px;
+        }
+        a:nth-child(2) {
+            width: 150px;
+        }
+        a:nth-child(3) {
+            width: 150px;
+        }
+        a:nth-child(4) {
+            width: 150px;
+        }
+        a:nth-child(5) {
+            width: 150px;
+        }
+        nav .start-home, a:nth-child(1):hover~.animation {
+            width: 150px;
+            left: 0;
+            background-color: #EFC551;
+        }
+        nav .start-about, a:nth-child(2):hover~.animation {
+            width: 150px;
+            left: 150px;
+            background-color: #EFC551;
+        }
+        nav .start-blog, a:nth-child(3):hover~.animation {
+            width: 150px;
+            left: 300px;
+            background-color:#EFC551;
+        }
+        nav .start-portefolio, a:nth-child(4):hover~.animation {
+            width: 150px;
+            left: 450px;
+            background-color: #EFC551;
+        }
+        nav .start-contact, a:nth-child(5):hover~.animation {
+            width: 150px;
+            left: 600px;
+            background-color: #EFC551;
+        }
+        .foto{
+            margin-left: 560px;
+            width: 100%;
+            padding: 0%;
+            margin-top: 0px;
+        }
+        h1{
+           margin-top: 50px;
+           font-size: 40px;
+           color: #ffffff;
+        }
+        /*  */
+        
+        .rating {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin:30px auto;
+          
+      }
+
+      .rating>input {
+          display: none
+      }
+
+      .rating>label {
+          position: relative;
+          width: 25px;
+          font-size: 25px;
+          color: #FFD600;
+          cursor: pointer
+      }
+
+      .rating>label::before {
+          content: "\2605";
+          position: absolute;
+          opacity: 0
+      }
+
+      .rating>label:hover:before,
+      .rating>label:hover~label:before {
+          opacity: 1 !important
+      }
+
+      .rating>input:checked~label:before {
+          opacity: 1
+      }
+
+      .rating:hover>input:checked~label:before {
+          opacity: 0.4
+      }
+
+      body {
+          background: #222225;
+          color: white;
+          overflow-x: hidden;
+          
+          flex-direction: row-reverse; 
+          /* sayfa sağa sola kayması */
+          
+      }
+
+    
+      p {
+          text-align: center
+      }
+
+      p {
+          font-size: 1.2rem
+      }
+
+      @media only screen and (width: 200px) {
+         
+
+          p {
+              font-size: 10px
+          }
+      }
+.foto{
+  height: 400px;
+  
+}
+.foto img {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.yorumbutonu{
+background-color: #5C5C5C;;
+box-sizing: border-box;
+color: white;
+padding: 5px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+margin-left:160px ;
+margin-top: 15px;
+}
+.yorumtable {
+    text-align: center;
+    margin-left: 52px;
+   
+    width: 300px;
+}
+
+    </style>
+</head>
+<body style="background-color:#646464">
+    <div class="sagiçerik " >
+        <div id="kategori"  style="background-color: #646464 " >
+          <nav  style="background-color: #5C5C5C;"  >
+              <a href="../anasayfa.html">Anasayfa</a>
+              <a href="../onecıkanlar.html">Öne Çıkanlar</a>
+              <a href="../kategori.html">Kampanyalar</a>
+              <a href="../yorumform.html">Yorum Yap</a>
+              <a href="../login.html">Giriş Yap</a>
+              <div class="animation start-home"></div></nav></div></div>
+    <br>
+    <div style="text-align: center;"  width="%100" ><br>
+        <h1>Bay Nihat </h1>
+    </div> <hr>
+    <div>
+        <div class="foto">
+    <div class="owl-carousel owl-theme"style="width: 30%; height: 600pxs; margin: 100px"   >
+      
+        
+      <div> <img src="../../mekanlar/ankara/baynihat/1.jpg" /> </div>
+      <div> <img src="../../mekanlar/ankara/baynihat/2.jpg" /> </div>
+      <div> <img src="../../mekanlar/ankara/baynihat/3.jpg" /> </div>
+      <div> <img src="../../mekanlar/ankara/baynihat/4.jpg" /> </div>
+      <div> <img src="../../mekanlar/ankara/baynihat/5.jpg" /> </div>
+      <div> <img src="../../mekanlar/ankara/baynihat/6.jpg" /> </div>
+      
+
+      
+    </div></div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      
+        $('.owl-carousel').owlCarousel({
+            items:1,
+        margin:60,
+        center: true,
+        lazyLoad:true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true
+        
+    
+	  });
+	  
+    });
+    </script> 
+    <div class="kutular">
+        <div class="kutu1" id="iletişim" style="background-color:#646464" >
+            <h4>RESTORAN BİLGİLERİ</h4>
+        <table class="bilgitable">
+          
+        
+            
+           <tr><td><div> <img src="../../resimler/semboller/telefon.png"  style="width: 20px;" >
+            <a href="tel:(0212) 377 71 00">(0212) 377 71 00</a> <br>
+            
+            <img src="../../resimler/semboller/website.png"  style="width: 20px;" >
+            <a href="http://www.trilye.com.tr/">www.trilye.com.tr </a><tr> <td><ul style="list-style-type:circle; padding-left: 30px;" >
+                <li style="color: #ffffff;font-size: 15px;">Deniz Mahsülleri</li>
+                <li style="color: #ffffff;font-size: 15px;">Tatlı</li>
+                <li style="color: #ffffff;font-size: 15px;">Salata</li>
+                <li style="color: #ffffff;font-size: 15px;">Kahve</li>
+               
+                
+            </ul></td></tr>
+        </table></div>
+    
+        <div class="kutu1" id="değerlendirme" style="background-color:#646464 ">
+            <h4>DEĞERLENDİRMELER</h4>
+            <table class="yorumtable" >
+                <tr>
+                    <td >
+                        <img src="../../resimler/4yıldız.png" style="left: 100%; width: 100px; height: 28,8px; ">
+                   </td></tr>
+                   <tr>
+                    <td>Havva <br>
+                        Yemekleri çok güzeldi <br>
+                        Puan: 5 yıldız<hr>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>Enes<br>
+                        ilgi beklediğim gibi değildi<br>
+                        Puan: 2 yıldız<hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td><div id="yorumlarmikla" style="text-align: center;">
+                        <textarea name="sonuc" id="result" cols="30" rows="10" ></textarea>
+                    </div><hr></td>
+                </tr>
+                
+            </table>
+          
+            <a href="../yorumform.html">
+            <button onclick="saveData()" class="yorumbutonu">Yorum Yap</button></a>
+            
+        </div>
+    
+        <div class="kutu1" id="konum" style="background-color:#646464">
+            <h4>KONUM BİLGİLERİ</h4>
+             <p>  <img src="../../resimler/semboller/konum.png" style="width: 20px;">
+                Mithatpaşa, Bay Nihat Lale Otel, Cumhuriyet Cd. No:12, 10400 Ayvalık/Balıkesir</p><br>
+            <div style="display: flex; justify-content:stretch; flex-direction: column;  ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12344.355107936399!2d26.6589584!3d39.3315741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba7653b9e6a22f%3A0x62b6bb1c0d10bb6!2sBay%20Nihat%20Restoran!5e0!3m2!1str!2str!4v1686261595641!5m2!1str!2str" width="390" height="210" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+    </div></div>
+    </body>
+    <footer >
+        <div class="footer">
+        
+          <div class="footer_container">
+         
+            <div id="kutu">
+              <b>Sayfalar</b>
+              <ul>
+                <li><a href="anasayfa.html" ></a>Ana Sayfa</li>
+                <li><a href="kategori.html"></a>Kampanyalar</li>
+                <li><a href="mekanlar.html" ></a>Mekanlar</li>
+                
+                <li><a href="mailto:info@gmail.com"></a>İletişim</li>
+              </ul>
+            </div>
+        
+            <div id="kutu" style="margin-left:150px;">
+              <b>İletişim</b>
+              <ul>
+                <li>Havva Beyza Bir</li>
+                <li>C: 0 507 016 74 35</li>
+                <li>M:havvabeyza1499@gmail.com</li>
+                
+              </ul> 
+            </div>
+           
+            <div id="kutu" style="margin-left:150px;">
+              <b>Sosyal Medya</b>
+              <ul>
+                <li><img src="../../resimler/instgramlogo.png" style="width: 27px;"></li>
+                <li><img src="../../resimler/facebooklogo (1).png" style="width: 27px;"></li>
+                <li><img src="../../resimler/twitterlogo.png" style="width: 23px;"></li>
+              </ul>
+            </div>
+           
+          </div>
+         
+        </div>
+        </footer>
+        <script>
+        window.onload = function() {
+            var name = localStorage.getItem('name');
+            var comment = localStorage.getItem('comment');
+            var rating = localStorage.getItem('rating');
+          
+            if (name && comment && rating) {
+              var div = document.getElementById('yorumlarmikla');
+              div.innerHTML = "" + name + "<br> " + comment + "<br>Puan: " + rating + " yıldız";
+            }
+          }
+          </script>
+
+
+  
+
+</body>
+</html>

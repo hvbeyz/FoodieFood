@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yorum Yap</title>
+  <link rel="icon" href="../resimler/ico.ico" type="image/x-icon">
+  <style>
+    .yorumkutusu {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .yorumkutusu label {
+        text-align: left;
+        padding: 10px;
+       
+    }
+
+    .image-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .caption {
+      font-style: italic;
+      color: #999;
+      
+    }
+/*  */
+.rating {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          margin:10px auto;
+
+      }
+
+      .rating>input {
+          display: none
+      }
+
+      .rating>label {
+          position: relative;
+          width: 20px;
+          font-size: 30px;
+          color: #FFD600;
+          cursor: pointer
+      }
+
+      .rating>label::before {
+          content: "\2605";
+          position: absolute;
+          opacity: 0
+      }
+
+      .rating>label:hover:before,
+      .rating>label:hover~label:before {
+          opacity: 1 !important
+      }
+
+      .rating>input:checked~label:before {
+          opacity: 1
+      }
+
+      .rating:hover>input:checked~label:before {
+          opacity: 0.4
+      }
+
+      body {
+          background: #5C5C5C;
+          color: white;
+
+      }
+
+
+      p {
+          text-align: center
+      }
+
+
+
+      @media only screen and (width: 200px) {
+
+
+          p {
+              font-size: 10px
+          }
+      }
+      .kutular{
+
+        margin-left: 300px;
+        margin-right: 300px;
+        margin-top: 500px;
+        display: flex;
+        justify-content: center;
+
+      }
+
+      .beyazlogo{
+            border-radius: 50%; 
+            padding: 5px; 
+            margin-left: 0px;
+			      margin-bottom: 50px;
+		}
+    textarea{
+      background-color: #5C5C5C;
+      width: 400px;
+      height: 100px;
+      font-family: sans-serif;
+      text-align: center;
+      border-color: #ccc;
+    }
+    text{
+      color: white;
+    }
+  
+
+.kutus{
+	box-sizing: border-box;
+    border: 3px solid #EFC551;
+    width: 500px;
+	height: 950px;
+    box-shadow: 0px 5px 20px 10px #414141;
+	position: absolute;
+	top: 15%;
+	bottom: 85%;
+	left: 38%;
+	right: 62%;
+}
+button{
+				background-color: #EFC551;
+box-sizing: border-box;
+color: white;
+padding: 5px;
+text-align: center;
+text-decoration: none;
+font-size: 20px;
+margin-left:0px ;
+margin-top: 20px;}
+nav {
+            margin: 20px auto 0;
+         
+            position: relative;
+            width: 750px;
+            height: 50px;
+            background-color: #5C5C5C;
+            
+            font-size: 0;
+        }
+        nav a {
+            line-height: 50px;
+            height: 100%;
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+        nav .animation {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            transition: all .5s ease 0s;
+        }
+        a:nth-child(1) {
+            width: 150px;
+        }
+        a:nth-child(2) {
+            width: 150px;
+        }
+        a:nth-child(3) {
+            width: 150px;
+        }
+        a:nth-child(4) {
+            width: 150px;
+        }
+        a:nth-child(5) {
+            width: 150px;
+        }
+        nav .start-home, a:nth-child(1):hover~.animation {
+            width: 150px;
+            left: 0;
+            background-color: #EFC551;
+        }
+        nav .start-about, a:nth-child(2):hover~.animation {
+            width: 150px;
+            left: 150px;
+            background-color: #EFC551;
+        }
+        nav .start-blog, a:nth-child(3):hover~.animation {
+            width: 150px;
+            left: 300px;
+            background-color:#EFC551;
+        }
+        nav .start-portefolio, a:nth-child(4):hover~.animation {
+            width: 150px;
+            left: 450px;
+            background-color: #EFC551;
+        }
+        nav .start-contact, a:nth-child(5):hover~.animation {
+            width: 150px;
+            left: 600px;
+            background-color: #EFC551;
+        }
+        html{
+            text-decoration: none;
+            
+            color: white;
+            cursor: pointer;
+            font-family: sans-serif;
+            
+        }
+        .footer { background:#333333;width:100%; height:200px;float:left;color:white; font-family:arial;
+        margin-top: 1090px;}
+		.footer #kutu b {font-size:14px;}
+		
+		.footer_container{width:768px; height:175px; margin:30px auto;}
+		ul {list-style-type:none;margin:17px 0;padding:0px;}
+		#kutu {width:auto; height:125px; float:left;}
+		ul li {float:left;font-family:tahoma; font-size:12px; margin-bottom:8px; clear:left; color:#949798; }
+		#kutu:last-child li {float:left;clear:none;margin-right:10px;}
+
+  </style>
+</head>
+<body style="background-color: #5C5C5C ;">
+  <nav  style="background-color: #5C5C5C;"  >
+		<a href="anasayfa.html">Anasayfa</a>
+		<a href="onecıkanlar">Öne Çıkanlar</a>
+		<a href="kategori.html">Kampanyalar</a>
+		<a href="yorumform.html">Yorum Yap</a>
+		<a href="login.html">Giriş Yap</a>
+		<div class="animation start-home"></div></nav>
+  <div class="kutus" style="display: flex; align-items: center; flex-direction: column; padding:50px; text-align: center;">
+  
+    <form ><img src="../resimler/beyazlogo.png"  class="beyazlogo"  width="200px" height="200px" >
+        <div class="yorumkutusu" id="comment" style="text-align: left; ">
+        <label for="name" style="font-size: 20px; font: sans-serif;background-color:#5C5C5C; ">Adınız: </label>
+        <input type="text" style="font-size: 20px; font: sans-serif;background-color: #5C5C5C; color: white; border-color: #ccc;"id="name" name="name"  required ><br>
+
+        <label for="comment" style="font-size: 20px; font: sans-serif;">Yorumunuz:</label>
+        <textarea id="commentText" style="font-size: 20px; font: sans-serif;color: white;" name="comment" required></textarea><br>
+
+        <div class="rating">
+          <input type="radio" name="rating" value="5" id="5">
+          <label for="5">☆</label>
+          <input type="radio" name="rating" value="4" id="4">
+          <label for="4">☆</label>
+          <input type="radio" name="rating" value="3" id="3">
+          <label for="3">☆</label>
+          <input type="radio" name="rating" value="2" id="2">
+          <label for="2">☆</label>
+          <input type="radio" name="rating" value="1" id="1">
+          <label for="1">☆</label>
+        </div>
+
+        <textarea name="sonuc" id="result"style="font-size: 20px; font: sans-serif;color: white;"  cols="1" rows="1"></textarea>
+
+        <button onclick="saveData()">Yorum Yap</button>
+      </div></div>
+    </form>
+
+    <script>
+      // Function to save the entered data
+      function saveData() {
+        var name = document.getElementById('name').value;
+        var comment = document.getElementById('commentText').value;
+        var rating = document.querySelector('input[name="rating"]:checked').value;
+
+        // Save the data in local storage
+        localStorage.setItem('name', name);
+        localStorage.setItem('comment', comment);
+        localStorage.setItem('rating', rating);
+
+        // Update the result textarea with the saved data
+        document.getElementById('result').value = "Name: " + name + "\nComment: " + comment + "\nRating: " + rating + " stars";
+      }
+
+      // Check if there is any saved data and update the result textarea on page load
+      window.onload = function() {
+        var name = localStorage.getItem('name');
+        var comment = localStorage.getItem('comment');
+        var rating = localStorage.getItem('rating');
+
+        if (name && comment && rating) {
+          document.getElementById('name').value = name;
+          document.getElementById('commentText').value = comment;
+          document.getElementById('result').value = "Name: " + name + "\n " + comment + "\nPuan " + rating + " yıldız";
+
+          // Select the radio button with the saved rating
+          document.getElementById(rating).checked = true;
+        }
+
+      }
+    </script>
+    <footer  >
+      
+      <div class="footer">
+      
+        <div class="footer_container">
+       
+          <div id="kutu">
+            <b>Sayfalar</b>
+            <ul>
+              <li><a href="anasayfa.html" ></a>Ana Sayfa</li>
+              <li><a href="kategori.html"></a>Kampanyalar</li>
+              <li><a href="mekanlar.html" ></a>Mekanlar</li>
+              
+              <li><a href="mailto:info@gmail.com"></a>İletişim</li>
+            </ul>
+          </div>
+      
+          <div id="kutu" style="margin-left:150px;">
+            <b>İletişim</b>
+            <ul>
+              <li>Havva Beyza Bir</li>
+              <li>C: 0 507 016 74 35</li>
+              <li>M:havvabeyza1499@gmail.com</li>
+              
+            </ul>
+          </div>
+         
+          <div id="kutu" style="margin-left:150px;">
+            <b>Sosyal Medya</b>
+            <ul>
+              <li><img src="../resimler/instgramlogo.png" style="width: 27px;"></li>
+              <li><img src="../resimler/facebooklogo (1).png" style="width: 27px;"></li>
+              <li><img src="../resimler/twitterlogo.png" style="width: 23px;"></li>
+            </ul>
+          </div>
+         
+        </div>
+       
+      </div>
+      </footer>
+</body>
+</html>
